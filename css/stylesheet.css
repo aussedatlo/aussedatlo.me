@@ -1,0 +1,208 @@
+body {
+  background-color: #1e1e1e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(../font/XXIIAven-Medium.ttf);
+}
+
+.icon {
+  width: 1.5em;
+  height: 1.5em;
+  fill: #ddd !important;
+  color: #ddd;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.row-menu {
+  height: 20%;
+}
+
+.row-title {
+  height: 80%;
+}
+
+.col-menu {
+  text-align: center;
+  color: #ddd;
+  font-family: myFirstFont;
+  font-size: 20px;
+  margin-top: 0px !important;
+  margin-bottom: 3em;
+}
+
+div,
+span {
+  font-family: myFirstFont;
+}
+
+.red {
+  color: #f94144;
+}
+
+.green {
+  color: #43aa8b;
+}
+
+.yellow {
+  color: #f9c74f;
+}
+
+.blue {
+  color: #277da1;
+}
+
+.white {
+  color: #ddd;
+}
+
+.parallax {
+  position: relative;
+}
+
+@media (max-width: 800px) {
+  #parallax {
+    background-size: 180%;
+  }
+
+  .col-menu {
+    font-size: 12px;
+  }
+
+  .row-responsive {
+    display: block;
+  }
+
+  .content-techno {
+    display: none !important;
+  }
+}
+
+#parallax {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background-image: url(../assets/aussedatlo.png),
+    url(../assets/aussedatlo-chevron.png),
+    url(../assets/aussedatlo-background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: 50% 50%;
+}
+
+.button {
+  display: inline-block;
+  margin: 0;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.button:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px currentColor;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+.button:hover:after {
+  transform: scaleX(1);
+}
+.button.fromRight:after {
+  transform-origin: 100% 50%;
+}
+.button.fromLeft:after {
+  transform-origin: 0% 50%;
+}
+
+[id^="section"] {
+  text-align: center;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+h1 {
+  font-family: myFirstFont;
+}
+
+#section1 {
+  height: 100vh;
+}
+
+#section2,
+#section4 {
+  background-color: #ddd;
+}
+
+a {
+  text-decoration: none;
+  color: #ddd;
+}
+
+#section2 > p,
+#section2 > h1,
+#section4 > p,
+#section4 > h1 {
+  color: #1e1e1e;
+}
+
+#section3 > p,
+#section3 > h1,
+#section5 > p,
+#section5 > h1 {
+  color: #ddd;
+}
+
+.icon-techno {
+  height: 7vw;
+  width: 7vw;
+}
+
+.col-techno {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-techno {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  position: absolute;
+  opacity: 0;
+  width: 8vw;
+  height: 4vw;
+  background: #ddd;
+  transition: all 0.4s ease-in-out;
+  font-family: myFirstFont;
+}
+
+.tile-techno:hover > .content-techno {
+  opacity: 0.9;
+}
+
+.tile-techno {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  width: 12vw;
+  height: 12vw;
+  background-color: #1e1e1e;
+}
+
+.svg {
+  filter: invert(99%) sepia(1%) saturate(176%) hue-rotate(137deg)
+    brightness(104%) contrast(73%);
+}
